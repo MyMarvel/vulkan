@@ -1,0 +1,14 @@
+name: Vulkan2019
+type: theme
+description: Nice theme for Vulkan34 services website
+core: 8.x
+base theme: stable
+# Defines libraries group in which we can add css/js.
+libraries:
+  - vulkan2019/global-styling
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  footer: Footer

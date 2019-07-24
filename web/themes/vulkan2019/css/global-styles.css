@@ -1,0 +1,448 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input {
+	outline: 0;
+}
+
+/**
+ * Custom styles
+ */
+body, html {
+  height: 100%;
+}
+
+body {
+	background: #06070a;
+	color: white;
+	font-family: "PTSans-Regular";
+	font-size: 18px;
+}
+
+a {
+	color: #ffb400;
+}
+
+@font-face {
+	font-family: "PFDinTextCompPro-Medium";
+	src: url("../fonts/PFDinTextCompPro-Medium.eot");
+	src: url("../fonts/PFDinTextCompPro-Medium.woff") format("woff"),
+	url("../fonts/PFDinTextCompPro-Medium.otf") format("opentype"),
+	url("../fonts/PFDinTextCompPro-Medium.svg#filename") format("svg");
+}
+
+@font-face {
+	font-family: "PFDinTextCompPro";
+	src: url("../fonts/ofontruPFDinTextCompPro.eot");
+	src: url("../fonts/ofontruPFDinTextCompPro.woff") format("woff"),
+	url("../fonts/ofontruPFDinTextCompPro.otf") format("opentype"),
+	url("../fonts/ofontruPFDinTextCompPro.svg#filename") format("svg");
+}
+
+@font-face {
+	font-family: "PTSans-Regular";
+	src: url("../fonts/PTS55F.eot");
+	src: url("../fonts/PTS55F.woff") format("woff"),
+	url("../fonts/PTS55F.otf") format("opentype"),
+	url("../fonts/PTS55F.svg#filename") format("svg");
+}
+
+.path-frontpage .layout-container,
+.path-frontpage .dialog-off-canvas-main-canvas {
+  height: 100%;
+}
+
+.frontpage header { 
+  /* The image used */
+  background-image: url("../img/main.jpg");
+  transition: background 0.4s linear;
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  max-height: 2000px;
+}
+
+#page-cover {
+	background: url("../img/footer-bkd.png") no-repeat bottom #06070a;
+	background-size: cover;
+}
+
+.region {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.site-name {
+	text-decoration: none;
+	color: #ffb400;
+	font-size: 60px;
+	line-height: 1em;
+	font-family: 'PFDinTextCompPro-Medium';
+	text-transform: uppercase;
+	letter-spacing: -3px;
+}
+
+.frontpage .site-name {
+	color: white;
+}
+
+#block-vulkan2019-branding {
+	padding-top: 15px;
+    width: 200px;
+    float: left;
+}
+
+.frontpage #block-vulkan2019-branding {
+	padding-top: 40px;
+}
+
+
+#search-block-form {
+	background: #262626;
+	border-radius: 50px;
+	width: 270px;
+	float: right;
+	margin-top: 15px;
+	color: white;
+}
+
+.frontpage #search-block-form {
+	background: white;
+	margin-top: 40px;
+	color: black;
+}
+
+#search-block-form input[name="keys"] {
+	width: 175px;
+	line-height: 46px;
+	height: 46px;
+	margin-left: 30px;
+	border: none;
+	font-size: 20px;
+	float: left;
+	font-family: 'PFDinTextCompPro';
+	margin-top: 2px;
+	background: none;
+}
+
+#search-block-form input[name="keys"]::placeholder {
+	color: white;
+}
+
+.frontpage #search-block-form input[name="keys"]::placeholder {
+	color: gray;
+}
+
+#search-block-form .form-item-keys {
+	display: inline-block;
+}
+#search-block-form .form-actions {
+	float: right;
+}
+#search-block-form .form-actions input {
+    background:url('../img/search.png') no-repeat;
+    cursor:pointer;
+    width: 200px;
+    height: 100px;
+    border: none;
+    width: 52px;
+    height: 49px;
+    text-indent: -1000em;
+    float: right;
+}
+
+.views.catalog {
+	text-align:center;
+	font-family: "PFDinTextCompPro";
+	font-size: 24px;
+	line-height: 1.3em;
+}
+
+.views.catalog a {
+	color: white;
+	text-decoration: none;
+}
+
+.views.catalog a:hover,
+.views.catalog .views-col:hover a {
+	color: #ffb400;
+	text-decoration: underline;
+}
+
+.views.catalog .views-field-name {
+	margin-bottom: 15px;
+}
+
+.menu_local_tasks {
+	margin-top: 1.5em;	
+}
+.menu_local_tasks li {
+	display: inline-block;
+	margin-right: 1em;
+	font-size: 80%;
+}
+
+h1::before, h2::before {
+	background: #ffb400;
+	border-radius: 50px;
+	height: 66px;
+	width: 11px;
+	content: " ";
+	display: block;
+    float: left;
+    margin-right: 0.3em;
+}
+
+h1, h2 {
+	font-family: 'PFDinTextCompPro-Medium';
+	font-size: 68px;
+	margin-top: 0.1em;
+	margin-bottom: 0.4em;
+}
+
+p {
+	margin-bottom: 1.4em;
+	line-height: 1.6em;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.inner-menu {
+	width: 430px;
+	float: left;
+}
+.top-main-menu ul {
+	margin-bottom: 2em;
+}
+
+.top-main-menu li {
+	display: inline-block;
+	font-family: 'PFDinTextCompPro-Medium';
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.top-main-menu li a,
+.menu.menu-footer li a {
+	color: white;
+	text-decoration: none;
+	line-height: 84px;
+	padding: 0 0.9em;
+	display: inline-block;
+	margin-bottom: 2px;
+}
+.top-main-menu li a:hover,
+.top-main-menu li a.is-active {
+	background: #7f5a00;
+	border-bottom: solid 2px #ffb400;
+	margin-bottom: 0px;
+}
+
+.top-main-menu ul.menu-top-navigation-inner-pages {
+	margin-bottom: 0;
+}
+
+.region.region-footer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.footer-outer {
+	max-width: 100%;
+	background:rgba(0,0,0,0.3);
+}
+
+.frontpage-phones {
+	float: right;
+	text-align: right;
+	width: 240px;
+	margin-right: 0.5em;
+	font-family: 'PFDinTextCompPro-Medium';
+	font-size: 30px;
+	line-height: 1em;
+	color: white;
+	margin-top:10px;
+}
+
+.frontpage-phones span {
+	color: #ffb400;
+}
+
+header .frontpage-phones {
+	margin-top: 10px;
+}
+
+.menu.menu-footer {
+	margin-top: 1em;
+}
+.menu.menu-footer li {
+	display: inline-block;
+	line-height: 1.5em;
+	font-family: 'PFDinTextCompPro-Medium';
+	font-size: 20px;
+}
+.menu.menu-footer li a:hover,
+.menu.menu-footer li a.is-active {
+	color: #ffb400;
+	text-decoration: underline;
+}
+.menu.menu-footer :first-child a{
+	padding-left: 0;
+}
+
+a.button {
+	color: #3c2f1f;
+	font-family: 'PFDinTextCompPro-Medium';
+	font-size: 48px;	
+	text-decoration: none;
+	line-height: 1.3em;
+	display: inline-block;
+	border-radius: 25px;
+	//border-bottom: solid 6px #ff971c;
+    background: #ffb119; /* Для старых браузров */
+    background: linear-gradient(to top, #ffb119, #ffcd05);
+	border-bottom: solid 1px #ffd200;
+	padding: 0 1em;
+	box-shadow: 1px 5px 0 -3px #ff971c;
+}
+
+a.button.add_content_button {
+	font-size: 24px;
+	margin-top: 1em;
+}
+
+#block-addcontentbutton {
+	text-align: right;	
+}
+
+.view-grid-4 .view-body {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2vw;
+}
+
+.view-grid .views-row {
+	text-align: center;
+}
+
+.views.taxonomy-term .views-field-title {
+	line-height: 1.5em;
+}
+
+.pager {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 1em;
+}
+.pager li {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+.pager li a {
+	text-decoration: none;
+}
+
+.pager li.is-active a {
+	background: #ffb119;
+	border-radius: 30px;
+	color: black;
+	font-weight: bold;
+	padding: 0px 7px;
+}
+
+.pager .pager__item--first,
+.pager .pager__item--last {
+	display: none;
+}
+
+.form-item {
+	margin: 0.5em 0;
+}
+
+.webform-submission-contact-form label {
+	width: 80px;
+	display: inline-block;
+}
+
+.js-form-type-textarea label {
+	width: 140px;
+}
+
+.form-tel {
+	width: 450px;
+}
+
+.webform-submission-contact-form textarea {
+	width: 525px;
+}
+
+.search-help-link {
+	margin: 1em 0;
+	display: block;
+}
+
+.search-advanced {
+	margin: 1em 0;
+}

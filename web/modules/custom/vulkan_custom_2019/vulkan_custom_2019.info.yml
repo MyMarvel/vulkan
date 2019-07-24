@@ -1,0 +1,7 @@
+name: Vulkan 2019
+type: module
+description: Custom hooks and code for Vulkan34 website.
+core: 8.x
+package: Custom
+dependencies:
+  - block

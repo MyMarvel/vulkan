@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Vulkan2019 theme.
+ */
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements template_preprocess_region().
+ */
+function vulkan2019_preprocess_region(&$variables) {
+  // Add missing region CSS classes.
+  $variables['attributes']['class'][] = 'region';
+  if (isset($variables['region']) && !empty($variables['region'])) {
+    $variables['attributes']['class'][] = 'region-' . str_replace('_', '-', $variables['region']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function vulkan2019_preprocess_html(&$variables) {
+  $path_class = !$variables['root_path'] ? 'path-frontpage' : 'path-' . Html::getClass($variables['root_path']);
+  if (isset($path_class)) {
+    $variables['attributes']['class'][] = $path_class;
+  }
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['attributes']['class'][] = 'frontpage';
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function vulkan2019_preprocess_input(&$variables) {
+  //if (isset($variables['attributes']['id'])) echo var_export($variables['attributes']['id']);
+  if (isset($variables['attributes']['id']) && $variables['attributes']['id'] == 'edit-keys') {
+    $variables['attributes']['placeholder'] = t('Search on website');
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function vulkan2019_page_attachments_alter(&$page){
+  if(\Drupal::service('path.matcher')->isFrontPage()) {
+    $page['#attached']['library'][] = 'vulkan2019/frontpage-highlight-background';
+  }
+}

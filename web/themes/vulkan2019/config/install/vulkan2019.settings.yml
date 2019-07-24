@@ -1,0 +1,5 @@
+features:
+  favicon: true
+favicon:
+  use_default: false
+  path: 'themes/vulkan2019/favicon.ico'

@@ -1,0 +1,10 @@
+global-styling:
+  css:
+    component:
+      css/global-styles.css: {}
+frontpage-highlight-background:
+  js: 
+    js/frontpage-highlight-background.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
